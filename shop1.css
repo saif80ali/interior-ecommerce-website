@@ -1,0 +1,6 @@
+.each-shop-item img {
+    /* height: auto; */
+    min-height: 247px;
+    max-height: 447px;
+    width: 100%;
+}

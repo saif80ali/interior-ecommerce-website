@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #user-credentials {
+            margin: 102px auto;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        h3 {
+            font-size: 2rem;
+            font-family: 'Roboto';
+            font-weight: bold;
+            margin: 17px auto;
+        }
+
+        p {
+            margin: auto;
+            width: 349px;
+            text-align: center;
+            font-size: 18px;
+            color: grey;
+            font-family: emoji;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+            margin: 31px auto;
+        }
+
+        .input {
+            margin: 5px 0px;
+            padding: 8px;
+            outline: none;
+            border: 2px solid #24a0ed;
+        }
+
+        span {
+            display: none;
+            color: red;
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        button {
+            width: 75%;
+            margin: -6px auto;
+            height: 36px;
+            font-weight: bold;
+            color: white;
+            background: #24a0ed;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #7db4e3;
+        }
+
+        .red {
+            border-color: red;
+        }
+
+        .hide {
+            display: inline;
+        }
+
+
+        .image-show {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 700px;
+            transform: translate(-50%, -50%);
+            box-shadow: 2px 4px 8px;
+            padding: 26px;
+            background: white;
+        }
+
+        #image-view {
+            max-width: 644px;
+            min-width: 500px;
+        }
+
+        #cross {
+            background: white;
+            position: relative;
+            right: 54%;
+            bottom: 33px;
+            text-transform: capitalize;
+            font-weight: bold;
+            border-radius: 50%;
+            color: gray;
+            cursor: pointer;
+        }
+
+        table {
+            margin-top: 5px;
+        }
+
+        td {
+            padding-left: 40px;
+            padding-top: 4px;
+            color: gray;
+            text-transform: capitalize;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="each-shop-item"><img src="images/dining-set1.jpeg" alt="" srcset="">
+        <div class="text-description">
+            <h3 class="product-name">rose 7 piece dining set</h3>
+            <p class="price-p">MRP:Rs.<span class="price">45,000</span></p>
+            <p class="offer-p">Offer Price:Rs.<sapn class="offer-price">40,000</sapn>
+            </p>
+        </div>
+        <button class="view-button" onclick="showimage('images/dining-set5.jpeg',4,'dining table','rose 7 piece dining set','40000')">View</button>
+    </div>
+</body>
+<div id="image" class="image-show">
+    <i id="cross" onclick="document.getElementById('image').style.display = 'none';">x</i>
+    <img id="image-view" src="" alt="Some Image of furniture">
+    <div id="explanation">
+        <table>
+            <tr>
+                <td style="font-weight: bold;">Product ID</td>
+                <td style="font-weight: bold;">Name</td>
+                <td style="font-weight: bold;">Description</td>
+                <td style="font-weight: bold;">Estimated Price</td>
+            </tr>
+            <tr>
+                <td id="p_id"></td>
+                <td id="p_name"></td>
+                <td id="p_des"></td>
+                <td id="p_price"></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script>
+    function showimage(imagepath, p_id, name, des, price) {
+        document.getElementById('image-view').src = imagepath
+        document.getElementById('image').style.display = "flex";
+        document.getElementById('p_id').innerHTML = p_id
+        document.getElementById('p_name').innerHTML = name
+        document.getElementById('p_des').innerHTML = des
+        document.getElementById('p_price').innerHTML = price
+
+
+    }
+
+
+</script>
+
+</html>

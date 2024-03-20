@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 4px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <form action="temporary_form.py" >
+        <select name="category" id="category" required>
+            <option value="bathromm">bathromm</option>
+            <option value="prayer room">prayer room</option>
+            <option value="false ceiling">false ceiling</option>
+            <option value="dressing table">dressing table</option>
+            <option value="beds">beds</option>
+            <option value="tables">tables</option>
+            <option value="drawers">drawers</option>
+            <option value="dining sets">dining sets</option>
+            <option value="furnishing">furnishing</option>
+            <option value="kitchen">kitchen</option>
+            <option value="wardrobe">wardrobe</option>
+            <option value="shoe rack">shoe rack</option>
+            <option value="sofa">sofa</option>
+            <option value="tv unit">tv unit</option>
+            <option value="study table">study table</option>
+        </select>
+        <input type="text" name="title" placeholder = "enter title" required>
+        <input type="file"  name="poster_image" id="poster_image" placeholder="poster_image" required>
+        <input type="file"  name="image_1" id="image_1" placeholder="image_1" required>
+        <input type="file" name="image_2" id="image_2" placeholder="image_2" required>
+        <input type="file" name="image_3" id="image_3" placeholder="image_3" required>
+        <input type="file" name="image_4" id="image_4" placeholder="image_4" required>
+        <input type="number" name="marked_price" placeholder="marked price"  required>
+        <input type="number" name="offer_price" placeholder="offer price" required>
+        <input type="submit" value="sumit">
+    </form>
+</body>
+</html>
